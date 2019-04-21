@@ -1,0 +1,1626 @@
+{
+	"info": {
+		"_postman_id": "b6240ca2-2189-4fd8-81ea-fcef1620dab0",
+		"name": "sh_psi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "基本",
+			"item": [
+				{
+					"name": "查询所有商品条目列表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/all_goods",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"all_goods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "增加商品",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "可乐",
+									"type": "text"
+								},
+								{
+									"key": "spec",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "goods_class",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "supplier",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "rec_price",
+									"value": "2.5",
+									"type": "text"
+								},
+								{
+									"key": "purchase_price",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "sale_price",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/add_goods",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"add_goods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "编辑商品",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "百事可乐11",
+									"type": "text"
+								},
+								{
+									"key": "spec",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "goods_class",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "supplier",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "rec_price",
+									"value": "2.5",
+									"type": "text"
+								},
+								{
+									"key": "purchase_price",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "sale_price",
+									"value": "3.5",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/edit_goods",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"edit_goods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除商品",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/del_goods",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"del_goods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查商品分类",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/all_class",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"all_class"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "编辑前查单条商品详细信息",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/edit_goods_before",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"edit_goods_before"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "编辑分类",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "可乐饮料",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/edit_class",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"edit_class"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除分类",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/del_class",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"del_class"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加分类",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "甜品",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/add_class",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"add_class"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查商品规格",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/all_spec",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"all_spec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "编辑商品规格",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "大瓶",
+									"type": "text"
+								},
+								{
+									"key": "sub_spec",
+									"value": "5000毫升",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/edit_spec",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"edit_spec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除商品规格",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/del_spec",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"del_spec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "增加商品规格",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "袋",
+									"type": "text"
+								},
+								{
+									"key": "sub_spec",
+									"value": "500g",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/add_spec",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"add_spec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查所有供应商/顾客",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/all_client",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"all_client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "编辑供应商/顾客",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "\n",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "饮料商人",
+									"type": "text"
+								},
+								{
+									"key": "tel",
+									"value": "10010",
+									"type": "text"
+								},
+								{
+									"key": "contacts",
+									"value": "李四",
+									"type": "text"
+								},
+								{
+									"key": "addr",
+									"value": "深圳北部",
+									"type": "text"
+								},
+								{
+									"key": "account",
+									"value": "564879564132564879",
+									"type": "text"
+								},
+								{
+									"key": "remarks",
+									"value": "测试供应商",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/edit_client",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"edit_client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加供应商/顾客",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "徐福记巧克力",
+									"type": "text"
+								},
+								{
+									"key": "tel",
+									"value": "10000",
+									"type": "text"
+								},
+								{
+									"key": "contacts",
+									"value": "徐经理",
+									"type": "text"
+								},
+								{
+									"key": "addr",
+									"value": "香港",
+									"type": "text"
+								},
+								{
+									"key": "account",
+									"value": "54879564132564",
+									"type": "text"
+								},
+								{
+									"key": "remarks",
+									"value": "卖糖果",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/add_client",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"add_client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除供应商/顾客",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/del_client",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"del_client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查所有仓库/门店",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/all_warehouse",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"all_warehouse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加仓库/门店",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "太空仓库",
+									"type": "text"
+								},
+								{
+									"key": "addr",
+									"value": "北极",
+									"type": "text"
+								},
+								{
+									"key": "tel",
+									"value": "138888",
+									"type": "text"
+								},
+								{
+									"key": "contacts",
+									"value": "张三",
+									"type": "text"
+								},
+								{
+									"key": "volume",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "remarks",
+									"value": "备注",
+									"type": "text"
+								},
+								{
+									"key": "storage_state",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/add_warehouse",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"add_warehouse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除仓库/门店",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/del_warehouse",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"del_warehouse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "编辑仓库/门店",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "月球仓库",
+									"type": "text"
+								},
+								{
+									"key": "addr",
+									"value": "月球",
+									"type": "text"
+								},
+								{
+									"key": "tel",
+									"value": "139999",
+									"type": "text"
+								},
+								{
+									"key": "contacts",
+									"value": "李三",
+									"type": "text"
+								},
+								{
+									"key": "volume",
+									"value": "10000",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "storage_state",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/base/edit_warehouse",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"base",
+								"edit_warehouse"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "进货销售",
+			"item": [
+				{
+					"name": "创建进货/销售订单",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "json_data_str",
+									"value": "{\n\t\"type\": \"销售订单\",\n\t\"client\": 1,\n\t\"warehouse\": 1,\n\t\"cabinets\": \"aa564879564\",\n\t\"send_way\": \"快递\",\n\t\"count_type\": \"现结付清\",\n\t\"real_price\": 3000,\n\t\"need_price\": 3888,\n\t\"orders\": [{\n\t\t\"num\": 100,\n\t\t\"need_price\": 110,\n\t\t\"new_need_price\": 100,\n\t\t\"batch\": \"2019888\",\n\t\t\"goods\": 1\n\t}, {\n\t\t\"num\": 200,\n\t\t\"need_price\": 220,\n\t\t\"new_need_price\": 200,\n\t\t\"batch\": \"2019888\",\n\t\t\"goods\": 1\n\t}]\n}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/purchase_sales/add_order",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"purchase_sales",
+								"add_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " 粗略查询有效进货订单",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/purchase_sales/all_order_simple",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"purchase_sales",
+								"all_order_simple"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "粗略查询有效销售订单",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/purchase_sales/all_sell_simple",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"purchase_sales",
+								"all_sell_simple"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "详细查询某张进货订单",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/purchase_sales/unite_order_detail",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"purchase_sales",
+								"unite_order_detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改订单，已出库不能修改，且只能修改基本信息",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "client",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "warehouse",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cabinets",
+									"value": "9999999999",
+									"type": "text"
+								},
+								{
+									"key": "send_way",
+									"value": "全球必达",
+									"type": "text"
+								},
+								{
+									"key": "count_type",
+									"value": "批结",
+									"type": "text"
+								},
+								{
+									"key": "real_price",
+									"value": "998",
+									"type": "text"
+								},
+								{
+									"key": "need_price",
+									"value": "999",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/purchase_sales/edit_order",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"purchase_sales",
+								"edit_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除订单",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/purchase_sales/del_order",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"purchase_sales",
+								"del_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "将订单进出库",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/purchase_sales/kucun_order",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"purchase_sales",
+								"kucun_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "结账订单",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1001",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/purchase_sales/bill_order",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"purchase_sales",
+								"bill_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "粗略查询所有审核中订单",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/purchase_sales/all_reviewing_order",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"purchase_sales",
+								"all_reviewing_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "将订单审核通过，权限控制未知",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "is_pass",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/purchase_sales/reviewed_order",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"purchase_sales",
+								"reviewed_order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "库存",
+			"item": [
+				{
+					"name": "查询所有有进出库记录且存量大于0的物品(商品条目可能无效)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/stock/goods_kucun",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"stock",
+								"goods_kucun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "盘点时根据库，查询有进出库记录的物品",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "warehouse",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/stock/check_goods",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"stock",
+								"check_goods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "盘点商品单，一旦生成即改变库存,若需要临时保存功能另外补充接口",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "json_goods_str",
+									"value": "{\n\t\"goods\": [{\n\t\t\"goods\": 2,\n\t\t\"batch\": \"546456\",\n\t\t\"num\": 888\n\t}],\n\t\"warehouse\": 1,\n\t\"check_time\": \"20190909\"\n}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/stock/check_kucun",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"stock",
+								"check_kucun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "调拨商品（考虑批次）,一旦生成即改变库存",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "json_goods_str",
+									"value": "{\n\t\"goods\": [{\n\t\t\"goods\": 2,\n\t\t\"batch\": \"546456\",\n\t\t\"num\": 3\n\t}],\n\t\"warehouse_out\": 1,\n\t\"warehouse_in\": 2,\n\t\"change_time\": \"19960114\"\n}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/stock/change_kucun",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"stock",
+								"change_kucun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "加工商品,一旦生成即改变库存，多种变多种",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "json_goods_str",
+									"value": "{\n\t\"goods_out\": [{\n\t\t\"goods\": 2,\n\t\t\"batch\": \"546456\",\n\t\t\"num\": 1\n\t}],\n\t  \"goods_in\": [{\n\t\t\"goods\": 1,\n\t\t\"batch\": \"9257\",\n\t\t\"num\": 11\n\t}],\n\t\"warehouse_out\": 1,\n\t\"warehouse_in\": 2,\n\t\"work_time\": \"19960114\"\n}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/stock/work_goods",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"stock",
+								"work_goods"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "报表",
+			"item": [
+				{
+					"name": "# 当下应付/应发统计,应付/应发不一定要提醒，联系现结、月结、批次结，只有一个数值",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "need_type",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/report/remain_money",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"report",
+								"remain_money"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "导出商品库存表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/report/export_1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"report",
+								"export_1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "自助结账",
+			"item": [
+				{
+					"name": "客户入账功能，另外对客户每次自助结账一张销售总单时，产生一个负的入账",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client",
+									"value": "570",
+									"type": "text"
+								},
+								{
+									"key": "money",
+									"value": "80000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auto_account/client_income",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auto_account",
+								"client_income"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "# 查询某个客户目前入账余额,正数加负数，余额不足不可结账",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client",
+									"value": "570",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auto_account/client_income_total",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auto_account",
+								"client_income_total"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
